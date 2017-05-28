@@ -12,6 +12,14 @@ var screen = document.getElementById('screen');
 
 // TODO: set screen should probably know how to set the screen to the result
 // HINT: pass an argument to this function!
+
+function clearButton() {
+  leftHand = '';
+  operator = '';
+  rightHand = '';
+  result = '';
+}
+
 function setScreen() {
   screen.innerText = leftHand + operator + rightHand;
 }
@@ -64,9 +72,7 @@ equalButton.addEventListener('click', function() {
         result = lH / rH;
         console.log(result);
         break;
-        case 'C':
-        console.log();
-        break;
+
       default:
        alert('Invalid Operator!');
     }
@@ -75,3 +81,7 @@ equalButton.addEventListener('click', function() {
     alert('Invalid Equation!');
   }
 });
+
+clearButton.addEventListener('click', function() {
+  
+}
